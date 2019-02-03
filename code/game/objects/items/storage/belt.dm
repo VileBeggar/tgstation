@@ -500,6 +500,13 @@
 	icon_state = "janibelt"
 	item_state = "janibelt"
 
+/obj/item/storage/belt/janitor/full/PopulateContents()
+	new /obj/item/lightreplacer(src)
+	new /obj/item/reagent_containers/spray/cleaner(src)
+	new /obj/item/soap/nanotrasen(src)
+	new /obj/item/holosign_creator/janibarrier(src)
+	new /obj/item/melee/flyswatter(src)
+
 /obj/item/storage/belt/janitor/ComponentInitialize()
 	. = ..()
 	GET_COMPONENT(STR, /datum/component/storage)
